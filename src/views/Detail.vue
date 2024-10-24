@@ -1,5 +1,6 @@
 <script setup>
 import getPost from "@/composables/getPost"
+import Spinner from "@/components/Spinner.vue";
 let props = defineProps(["id"]);
 
 let { post, error, load } = getPost(props.id);
@@ -14,6 +15,6 @@ load();
         <p>{{ post.body }}</p>
     </div>
     <div v-else>
-        loading....
+        <Spinner></Spinner>
     </div>
 </template>
