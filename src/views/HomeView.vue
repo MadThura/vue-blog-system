@@ -2,7 +2,7 @@
 import PostsList from '../components/PostsList.vue';
 import getPosts from '@/composables/getPosts';
 
-let {posts, error, load} = getPosts();
+let { posts, error, load } = getPosts();
 
 load();
 
