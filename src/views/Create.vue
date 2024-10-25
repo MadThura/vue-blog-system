@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+let router = useRouter();
 let title = ref("");
 let body = ref("");
 let tag = ref("");
@@ -27,6 +29,7 @@ let addPost = async () => {
             }
         )
     });
+    router.push("/");
 }
 
 </script>
