@@ -1,6 +1,7 @@
 <script setup>
 import getPosts from '@/composables/getPosts';
 import PostsList from '@/components/PostsList.vue';
+import TagCloud from '@/components/TagCloud.vue';
 import { computed } from 'vue';
 let props = defineProps(["tag"]);
 
@@ -19,8 +20,13 @@ let filteredPosts = computed(() => {
 <template>
   <div class="tag">
     <div v-if="error">{{ error }}</div>
-    <div v-if="posts.length > 0">
-      <PostsList :posts="filteredPosts"></PostsList>
+    <div v-if="posts.length > 0" class="layout">
+      <div>
+        <PostsList :posts="filteredPosts"></PostsList>
+      </div>
+      <div>
+        <TagCloud></TagCloud>
+      </div>
     </div>
     <div v-else>
       loading...
