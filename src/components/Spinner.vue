@@ -12,7 +12,7 @@
     border-radius: 50%;
     margin: 0 auto;
     border: 3px solid transparent;
-    border-top-color: red;
+    border-top-color: hsla(160, 100%, 37%, 1);
     animation: spin 1s infinite;
 }
 @keyframes spin {
