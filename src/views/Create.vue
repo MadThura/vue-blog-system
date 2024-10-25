@@ -32,7 +32,6 @@ let addPost = async () => {
 </script>
 
 <template>
-    <h1>Create</h1>
     <form @submit.prevent="addPost">
         <label>Title</label>
         <input type="text" required v-model="title">
@@ -54,6 +53,7 @@ form {
     max-width: 480px;
     margin: 0 auto;
     text-align: left;
+    padding: 10px;
 }
 
 input,
