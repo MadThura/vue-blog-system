@@ -14,7 +14,7 @@ let cutPostBody = computed(() => {
         </router-link>
         <p>{{ cutPostBody }}</p>
         <div class="pill" v-for="tag in post.tags" :key="tag">
-            {{ tag }}
+            <router-link :to="{ name: 'Tag', params: { tag } }">{{ tag }}</router-link>
         </div>
     </div>
 </template>
