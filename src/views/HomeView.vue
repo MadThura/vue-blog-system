@@ -3,10 +3,10 @@ import PostsList from '../components/PostsList.vue';
 import getPosts from '@/composables/getPosts';
 import Spinner from '@/components/Spinner.vue';
 import TagCloud from '@/components/TagCloud.vue';
+
 let { posts, error, load } = getPosts();
 
 load();
-
 </script>
 
 <template>
@@ -19,7 +19,7 @@ load();
         <PostsList :posts="posts"></PostsList>
       </div>
       <div>
-        <TagCloud></TagCloud>
+        <TagCloud :posts="posts"></TagCloud>
       </div>
     </div>
     <div v-else>
